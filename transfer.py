@@ -38,6 +38,7 @@ class Spotify_client:
 
 
 def main():
+    print('loading YT Music')
     yt = YTMusic('headers_auth.json')
     songs = yt.get_library_songs(limit=9000, order='a_to_z')
     songs.extend(yt.get_library_upload_songs(limit=9000, order='a_to_z'))
